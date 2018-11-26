@@ -19,7 +19,7 @@ public class FaceTest {
 	
 	public static void main(String[] args) throws Exception{
 		
-        File file = new File("C:\\Users\\ºé¼ª\\Desktop\\img\\1.jpg");
+        File file = new File("C:/Users/ºé¼ª/Desktop/img/1.jpg");
 		byte[] buff = getBytesFromFile(file);
 		String url = "https://api-cn.faceplusplus.com/facepp/v3/detect";
         HashMap<String, String> map = new HashMap<>();
@@ -42,7 +42,8 @@ public class FaceTest {
     private final static int READ_OUT_TIME = 50000;
     private static String boundaryString = getBoundary();
     protected static byte[] post(String url, HashMap<String, String> map, HashMap<String, byte[]> fileMap) throws Exception {
-        HttpURLConnection conne;
+        System.out.println("½øÈëpostº¯Êý");
+    	HttpURLConnection conne;
         URL url1 = new URL(url);
         conne = (HttpURLConnection) url1.openConnection();
         conne.setDoOutput(true);
